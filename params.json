@@ -1,6 +1,6 @@
 {
   "name": "Bouncing Balls",
   "tagline": "html, svg, JS",
-  "body": "# balls\r\n",
+  "body": "<div width='80% height='80%'>\r\nTest\r\n</div>",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
