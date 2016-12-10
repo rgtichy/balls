@@ -110,14 +110,14 @@
 			// svg_html.removeChild(svg_html.childNode[b.html_id]);
 			// circles.splice(0,b.html_id);
 
-			var axw=a.info.r*a.info.velocity.x;
-			var ayw=a.info.r*a.info.velocity.y;
-			var bxw=b.info.r*b.info.velocity.x;
-			var byw=b.info.r*b.info.velocity.y;
+			var axw=Math.pow(a.info.r,2)*a.info.velocity.x;  //PIr^2 * speed to weight effect on vector
+			var ayw=Math.pow(a.info.r,2)*a.info.velocity.y;
+			var bxw=Math.pow(b.info.r,2)*b.info.velocity.x;
+			var byw=Math.pow(b.info.r,2)*b.info.velocity.y;
 			// going to add the qualities of the smaller radius to the 1st circle
 			a.info.r= Math.pow((Math.pow(a.info.r,2)+Math.pow(b.info.r,2)),(1/2));
-			a.info.velocity.x=(axw+bxw)/a.info.r;
-			a.info.velocity.y=(ayw+byw)/a.info.r;
+			a.info.velocity.x=(axw+bxw)/Math.pow(a.info.r,2);
+			a.info.velocity.y=(ayw+byw)/Math.pow(a.info.r,2);
 
 			a_html=document.getElementById(a.html_id);
 			a_html.setAttribute("r", a.info.r);
